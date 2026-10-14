@@ -6,13 +6,15 @@ jobs:
   foundation:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm exec expo install --check
+        env:
+          EXPO_OFFLINE: '1'
       - run: pnpm export:all

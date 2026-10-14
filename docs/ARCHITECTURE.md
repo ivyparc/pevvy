@@ -4,6 +4,8 @@
 
 Expo SDK 57, React Native 0.86.3, React 19.2.3, TypeScript 6, Expo Router를 사용합니다. 공식 안정 템플릿과 SDK 호환성 검사를 기준으로 버전을 선택하고 직접 의존성과 잠금 파일을 고정합니다. pnpm 11 설정은 `pnpm-workspace.yaml`에서 관리합니다. `unrs-resolver`의 패키지 설치 스크립트만 허용합니다.
 
+CI의 Expo 검사는 `EXPO_OFFLINE=1`로 설치된 SDK가 제공하는 호환성 목록을 검증합니다. 온라인 최신 패치 권장값이 바뀌었다는 이유만으로 이미 고정한 빌드가 실패하지 않게 합니다. 새 패치 업그레이드는 의존성 변경과 테스트를 함께 수행합니다.
+
 화면 진입은 `src/app`, 화면 구성은 `src/features`, 재사용 UI는 `src/design`, 순수 계약과 규칙은 `src/core`에 둡니다. 화면에서 공급자 API를 직접 호출하지 않습니다. 아직 서버, 인증 세션, 실제 데이터 저장소는 없습니다.
 
 ## 내비게이션

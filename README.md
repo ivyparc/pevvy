@@ -32,7 +32,7 @@ Expo Go에서 SDK 57 지원 버전으로 열거나 `pnpm ios`, `pnpm android`를
 
 ```sh
 pnpm check                     # 타입, 린트, 테스트
-pnpm exec expo install --check # Expo 호환성
+EXPO_OFFLINE=1 pnpm exec expo install --check # 고정된 SDK 호환성
 pnpm peers check               # 의존성 충돌
 pnpm export:all                # iOS, Android, 웹 번들
 ```

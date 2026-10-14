@@ -22,7 +22,7 @@
 ## 실제 검증 결과
 
 - `pnpm check`: TypeScript·ESLint 오류/경고 없음, 4개 suite와 18개 테스트 통과.
-- `pnpm exec expo install --check`: 의존성 호환성 통과.
+- `EXPO_OFFLINE=1 pnpm exec expo install --check`: 고정된 SDK의 의존성 호환성 통과.
 - `pnpm peers check`: peer dependency 충돌 없음.
 - `pnpm export:all`: iOS·Android Hermes 번들과 웹 번들·17개 정적 경로 생성 통과.
 - 브라우저 390×844 및 기본 크기에서 한국어·다크모드, 선택 상태 접근성, 새로고침 후 설정 유지 확인.
